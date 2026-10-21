@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librería Sakura</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Conecta el carrito. NO necesitas modificarlo. -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ========== MENÚ Y CARRITO ========== -->
+    <header>
+        <div class="logo">Librería <span>Sakura</span></div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#legado">Legado</a>
+            <!-- Botón del carrito. El número lo cambia script.js -->
+            <button id="boton-carrito">🛒 <span id="contador">0</span></button>
+        </nav>
+
+        <!-- El carrito: baja del menú al hacer clic en el 🛒.
+             NO CAMBIES estos nombres: carrito, lista, total, vaciar. -->
+        <div id="carrito">
+            <h3>Tu carrito</h3>
+            <ul id="lista"></ul>
+            <p class="total">Total: $<span id="total">0</span></p>
+            <button id="vaciar" class="boton">Vaciar carrito</button>
+        </div>
+    </header>
+
+
+    <!-- ========== PORTADA ========== -->
+    <section id="inicio" class="portada">
+        <h1>Literatura <span>Japonesa</span></h1>
+        <p>Bienvenido a Sakura, un rincón donde las historias japonesas florecen y cada página te invita a descubrir nuevas emociones, culturas y mundos por explorar.</p>
+        <a href="#catalogo" class="boton">Ver catálogo</a>
+    </section>
+
+
+    <!-- ========== CATÁLOGO ========== -->
+    <section id="catalogo">
+        <h2>Los más <span>buscados</span></h2>
+
+        <div class="contenedor-tarjetas">
+
+            <!-- CADA TARJETA lleva 3 cosas que usa el carrito:
+                 1. data-titulo → nombre del libro (diferente en cada uno)
+                 2. data-precio → precio SIN el signo $
+                 3. un botón con class="agregar"
+                 Estos datos no se ven en la página, pero el carrito los lee. -->
+
+            <div class="tarjeta" data-titulo="El Corazón de Yamato" data-precio="320">
+                <img src="img/libro 1.jpg" alt="Portada de El Corazón de Yamato">
+                <h3>El Corazón de Yamato</h3>
+                <p class="autor">Aki Shimazaki</p>
+                <p class="precio">$320</p>
+                <button class="agregar">Agregar al carrito</button>
+            </div>
+            <div class="tarjeta" data-titulo="Agujero" data-precio="180">
+                <img src="img/libro 2.jpg" alt="Portada de Agujero">
+                <h3>Agujero</h3>
+                <p class="autor">Hiroko Oyamada</p>
+                <p class="precio">$180</p>
+                <button class="agregar">Agregar al carrito</button>
+            </div>
+            <div class="tarjeta" data-titulo="Nagori" data-precio="150">
+                <img src="img/libro 3.jpg" alt="Portada de Nagori">
+                <h3>Nagori</h3>
+                <p class="autor">Ryoko Sekiguchi</p>
+                <p class="precio">$150</p>
+                <button class="agregar">Agregar al carrito</button>
+            </div>
+            <div class="tarjeta" data-titulo="Crónicas del Gato Viajero" data-precio="290">
+                <img src="img/libro 4.jpg" alt="Portada de Crónicas del Gato Viajero">
+                <h3>Crónicas del Gato Viajero</h3>
+                <p class="autor">Hiro Arikawa</p>
+                <p class="precio">$290</p>
+                <button class="agregar">Agregar al carrito</button>
+            </div>
+            <div class="tarjeta" data-titulo="Kokoro" data-precio="260">
+                <img src="img/libro 5.jpg" alt="Portada de Kokoro">
+                <h3>Kokoro</h3>
+                <p class="autor">Natsume Sōseki</p>
+                <p class="precio">$260</p>
+                <button class="agregar">Agregar al carrito</button>
+            </div>
+            <div class="tarjeta" data-titulo="Ella y su gato" data-precio="310">
+                <img src="img/libro 6.jpg" alt="Portada de Ella y su Gato">
+                <h3>Ella y su Gato</h3>
+                <p class="autor">Makoto Shinkai</p>
+                <p class="precio">$310</p>
+                <button class="agregar">Agregar al carrito</button>
+            </div>
+            <div class="tarjeta" data-titulo="La Dependienta" data-precio="200">
+                <img src="img/libro 7.jpg" alt="Portada de La Dependienta">
+                <h3>La Dependienta</h3>
+                <p class="autor">Sayaka Murata</p>
+                <p class="precio">$200</p>
+                <button class="agregar">Agregar al carrito</button>
+            </div>
+            <div class="tarjeta" data-titulo="Una flor" data-precio="170">
+                <img src="img/libro 8.jpg" alt="Portada de Una Flor">
+                <h3>Una Flor</h3>
+                <p class="autor">Miyamoto Yuriko</p>
+                <p class="precio">$170</p>
+                <button class="agregar">Agregar al carrito</button>
+            </div>
+
+            <!-- ✏️ RETO: copia una tarjeta y agrega tu libro favorito
+                 (cambia imagen, texto, data-titulo y data-precio) -->
+
+        </div>
+    </section>
+
+
+    <section id="legado">
+        <h2>Un viaje por  <span>las letras</span></h2>
+        <p>
+            La literatura japonesa es una expresión cultural con siglos de historia que combina tradición, sensibilidad y reflexión sobre la vida. Sus historias exploran temas como el amor, la naturaleza, la soledad y el paso del tiempo.
+            Japón ha creado un legado literario único que continúa cautivando a lectores de todo el mundo.
+        </p>
+    </section>
+
+
+    <footer>
+        <p>Librería Sakura © 2026</p>
+    </footer>
+
+</body>
+
+</html>
